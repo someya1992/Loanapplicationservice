@@ -21,7 +21,7 @@ public class LoanService {
 
     public LoanApplication createLoanApplication(LoanApplication loanApplication) {
         LoanApplication savedLoan = loanRepository.save(loanApplication);
-      //  kafkaTemplate.send(kafkaTopic, savedLoan);
+      //   kafkaTemplate.send(kafkaTopic, savedLoan);
         return savedLoan;
     }
 
