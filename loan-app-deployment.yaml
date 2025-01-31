@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loan-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: loan-app
+  template:
+    metadata:
+      labels:
+        app: loan-app
+    spec:
+      containers:
+        - name: loan-app
+          image: myacrregistry.azurecr.io/loan-app:v1
+          ports:
+            - containerPort: 8080
