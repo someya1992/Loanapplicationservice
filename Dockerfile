@@ -1,6 +1,9 @@
 # Use OpenJDK 8 as base image
 FROM openjdk:8-jdk-alpine
 
+# Install curl
+RUN apk --no-cache add curl
+
 # Set the working directory
 WORKDIR /app
 
